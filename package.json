@@ -1,0 +1,28 @@
+{
+  "name": "mugcollection-api",
+  "version": "1.0.0",
+  "description": "Tool to manage its own mug collection.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandrecaffarelli/mugcollection-api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandrecaffarelli/mugcollection-api/issues"
+  },
+  "homepage": "https://github.com/alexandrecaffarelli/mugcollection-api#readme",
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "pg": "^8.3.0"
+  }
+}
