@@ -12,8 +12,9 @@ Using:
 
 ## Getting Started
 
-1. Create your own `.env` and `sqitch.conf`, using `.example` files.
-2. Launch:
+1. Clone the repo using `git clone`.
+2. Create your own `.env` and `sqitch.conf`, using `.example` files.
+3. Launch:
 
 ```bash
 npm install
@@ -22,7 +23,7 @@ sqitch deploy
 npm run start
 ```
 
-3. Enjoy! :rocket:
+4. Enjoy! :rocket:
 
 To run as "dev mode": `npm run dev`. <br/>
 Please note that [nodemon](https://www.npmjs.com/package/nodemon) needs to be globally installed : `sudo npm install -g nodemon`
