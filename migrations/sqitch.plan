@@ -5,3 +5,4 @@
 mug-schema 2020-08-04T15:18:19Z Alexandre caffarelli <cafarelli.alexandre@gmail.com> # Added mug-schema to db
 get-mugs-function 2020-08-04T15:24:36Z Alexandre caffarelli <cafarelli.alexandre@gmail.com> # Added sql function to pull mugs data from db
 add-mug-function 2020-08-04T15:28:26Z Alexandre caffarelli <cafarelli.alexandre@gmail.com> # Added sql function to insert new mug into db
+use-mug-function 2020-08-04T15:32:12Z Alexandre caffarelli <cafarelli.alexandre@gmail.com> # Added sql function to update mug data in db
