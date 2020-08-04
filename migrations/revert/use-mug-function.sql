@@ -2,6 +2,6 @@
 
 BEGIN;
 
-DROP FUNCTION "use_mug"(INT);
+DROP FUNCTION "collection"."use_mug"(INT);
 
 COMMIT;

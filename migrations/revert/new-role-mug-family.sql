@@ -2,10 +2,10 @@
 
 BEGIN;
 
-DROP FUNCTION "get_random_mug"();
+DROP FUNCTION "collection"."get_random_mug"();
 
-REVOKE ALL ON ALL FUNCTIONS IN SCHEMA PUBLIC FROM "mug_family";
-REVOKE ALL ON ALL TABLES IN SCHEMA PUBLIC FROM "mug_family";
+REVOKE ALL ON ALL FUNCTIONS IN SCHEMA "collection" FROM "mug_family";
+REVOKE ALL ON ALL TABLES IN SCHEMA "collection" FROM "mug_family";
 
 DROP ROLE "mug_family";
 

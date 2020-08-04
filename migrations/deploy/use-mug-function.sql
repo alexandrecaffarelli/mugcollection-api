@@ -2,9 +2,9 @@
 
 BEGIN;
 
-CREATE FUNCTION "use_mug"("mug_id" INT) RETURNS "mug" AS 
+CREATE FUNCTION "collection"."use_mug"("mug_id" INT) RETURNS "collection"."mug" AS 
 $$
-    UPDATE "mug" SET "last_usage" = NOW(), "is_clean" = FALSE WHERE "id" = "mug_id" RETURNING *;
+    UPDATE "collection"."mug" SET "last_used" = NOW(), "is_clean" = FALSE WHERE "id" = "mug_id" RETURNING *;
 $$
 LANGUAGE SQL VOLATILE STRICT;
 

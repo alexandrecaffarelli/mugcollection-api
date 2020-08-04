@@ -2,12 +2,12 @@
 
 BEGIN;
 
-CREATE FUNCTION "new_mug"(
+CREATE FUNCTION "collection"."new_mug"(
     "lbl" TEXT, "cpt" INT,
     "dscr" TEXT
-) RETURNS "mug" AS
+) RETURNS "collection"."mug" AS
 $$
-    INSERT INTO "mug" ("label", "capacity", "description")
+    INSERT INTO "collection"."mug" ("label", "capacity", "description")
     VALUES ("lbl", "cpt", "dscr") RETURNING *;
 $$
 LANGUAGE SQL VOLATILE;

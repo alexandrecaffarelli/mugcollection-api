@@ -2,9 +2,9 @@
 
 BEGIN;
 
-CREATE FUNCTION "get_mugs"() RETURNS SETOF "mug" AS
+CREATE FUNCTION "collection"."get_mugs"() RETURNS SETOF "collection"."mug" AS
 $$
-    SELECT * FROM "mug" ORDER BY "id";
+    SELECT * FROM "collection"."mug" ORDER BY "id";
 $$
 LANGUAGE SQL STABLE STRICT; 
 

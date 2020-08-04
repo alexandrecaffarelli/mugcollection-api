@@ -2,7 +2,9 @@
 
 BEGIN;
 
-CREATE TABLE "mug" (
+CREATE SCHEMA "collection";
+
+CREATE TABLE "collection"."mug" (
     "id" INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     "label" TEXT NOT NULL UNIQUE,
     "capacity" INT NOT NULL DEFAULT 250, --in ml

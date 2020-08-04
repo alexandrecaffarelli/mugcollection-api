@@ -2,6 +2,8 @@
 
 BEGIN;
 
-DROP TABLE "mug";
+DROP TABLE IF EXISTS "collection"."mug";
+
+DROP SCHEMA IF EXISTS "collection";
 
 COMMIT;

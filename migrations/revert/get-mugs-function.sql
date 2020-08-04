@@ -2,6 +2,6 @@
 
 BEGIN;
 
-DROP FUNCTION "get_mugs"();
+DROP FUNCTION "collection"."get_mugs"();
 
 COMMIT;
