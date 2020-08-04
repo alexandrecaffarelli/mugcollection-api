@@ -1,0 +1,28 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+
+<svg width="122" height="154" view_box="0 0 122 154"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:link="http://www.w3.org/1999/xlink">\n\n<desc>Généré par Mocodo 2.3.7 le Thu, 23 Jul 2020 04:53:14</desc>
+
+<rect id="frame" x="0" y="0" width="122" height="154" fill="#ffffbf" stroke="none" stroke-width="0"/>
+
+<!-- Entity MUG -->
+<g id="entity-MUG">
+	<g id="frame-MUG">
+		<rect x="9" y="9" width="104" height="25" fill="#fdae61" stroke="#fdae61" stroke-width="0"/>
+		<rect x="9" y="34.0" width="104" height="111" fill="#fee08b" stroke="#fee08b" stroke-width="0"/>
+		<rect x="9" y="9" width="104" height="136" fill="none" stroke="#f46d43" stroke-width="2"/>
+		<line x1="9" y1="34" x2="113" y2="34" stroke="#f46d43" stroke-width="1"/>
+	</g>
+	<text x="46" y="26.7" fill="#000000" font-family="Verdana" font-size="12">MUG</text>
+	<text x="14" y="51.7" fill="#000000" font-family="Verdana" font-size="12">label</text>
+	<line x1="14" y1="54" x2="43" y2="54" stroke="#000000" stroke-width="1"/>
+	<text x="14" y="68.7" fill="#000000" font-family="Verdana" font-size="12">content</text>
+	<text x="14" y="85.8" fill="#000000" font-family="Verdana" font-size="12">last usage date</text>
+	<text x="14" y="102.8" fill="#000000" font-family="Verdana" font-size="12">clean</text>
+	<text x="14" y="119.8" fill="#000000" font-family="Verdana" font-size="12">description</text>
+	<text x="14" y="136.8" fill="#000000" font-family="Verdana" font-size="12">state</text>
+</g>
+</svg>

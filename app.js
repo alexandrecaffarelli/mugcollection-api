@@ -1,10 +1,11 @@
 require('dotenv').config();
 const express = require('express');
+const mugRouter = require('./router/mugRouter');
 
 const app = express();
 
 app.use(express.json());
-app.use(router);
+app.use(mugRouter);
 
 const port = process.env.PORT || 3000;
 
