@@ -64,4 +64,16 @@ module.exports = {
         };    
     },
 
+    // method to remove a selected mug from database
+    remove: async (request, response, next) => {
+        const mugId = request.params.id;
+        const mug = await Mug.findById(mugId);
+        if (mug.id !== null) {
+            await mug.remove();
+            response.json("The mug has been removed from your collection!");
+        } else {
+            next();
+        };  
+    },
+
 }; 

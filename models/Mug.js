@@ -34,4 +34,8 @@ module.exports = class Mug {
         this.id = result.rows[0].id;
     };
 
+    // prototype method to remove instantiated mug from database
+    async remove() {
+        const result = await client.query('SELECT * FROM "collection"."remove_mug"($1);', [this.id]);
+    };
 }
