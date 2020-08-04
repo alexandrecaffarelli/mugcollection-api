@@ -2,9 +2,9 @@
 
 BEGIN;
 
-CREATE OR REPLACE FUNCTION "new_mug"("new_mug_data" JSON) RETURNS "mug" AS
+CREATE OR REPLACE FUNCTION "collection"."new_mug"("new_mug_data" JSON) RETURNS "collection"."mug" AS
 $$
-    INSERT INTO "mug" ("label", "capacity", "description", "state")
+    INSERT INTO "collection"."mug" ("label", "capacity", "description", "state")
     VALUES (
         "new_mug_data"->>'label' ,
         ("new_mug_data"->>'capacity')::INT,

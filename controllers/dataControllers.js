@@ -2,6 +2,7 @@ const Joi = require ('@hapi/joi');
 
 module.exports = {
 
+    // method to validate mug information sent by client using joi
     validateMug: async (request, response, next) => {
         try {
             const JoiSchema = Joi.object({
