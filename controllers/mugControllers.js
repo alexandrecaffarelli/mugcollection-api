@@ -28,6 +28,7 @@ module.exports = {
         });
     },
 
+    // method to specify that a mug has been used
     use: async (request, response) => {
         const mugId = request.params.id;
         const mug = await Mug.findById(mugId);
@@ -36,6 +37,20 @@ module.exports = {
         response.json({
             data: mug
         });
+    },
+
+    // method to specify that a mug has been cleaned
+    clean: async (request, response) => {
+        const mugId = request.params.id;
+        const mug = await Mug.findById(mugId);
+        if (mug.is_clean) {
+            response.json("The mug is already clean!")
+        } else {
+            await mug.clean();
+            response.json({
+                data: mug
+            });
+        };
     },
 
     todo: (_, response) => {

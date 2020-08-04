@@ -21,7 +21,13 @@ module.exports = class Mug {
         const result = await client.query('SELECT * FROM "use_mug"($1);', [this.id]);
         Object.assign(this, result.rows[0]);
     };
-    
+
+    // prototype method to modify data (is_clean) from instantiated mug into database    
+    async clean() {
+        const result = await client.query('SELECT * FROM "clean_mug"($1);', [this.id]);
+        Object.assign(this, result.rows[0]);
+    };
+
     // prototype method to insert instantiated mug into database
     async save() {
         const result = await client.query('SELECT * FROM "new_mug"($1);', [this]);
