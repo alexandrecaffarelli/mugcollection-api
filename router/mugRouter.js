@@ -9,4 +9,8 @@ router.post('/', mugControllers.create);
 router.put('/use/:id(\\d+)', mugControllers.use);
 router.put('/clean/:id(\\d+)', mugControllers.clean);
 
+router.use((_, response) => {
+    response.status(404).json("Sorry can't find that!")
+});
+
 module.exports = router;

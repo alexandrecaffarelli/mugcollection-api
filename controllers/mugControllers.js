@@ -47,23 +47,21 @@ module.exports = {
     },
 
     // method to specify that a mug has been cleaned
-    clean: async (request, response) => {
+    clean: async (request, response, next) => {
         const mugId = request.params.id;
         const mug = await Mug.findById(mugId);
-        if (mug.is_clean) {
-            response.json("The mug is already clean!")
+        if (mug.id !== null) {
+            if (mug.is_clean) {
+                response.json("The mug is already clean!")
+            } else {
+                await mug.clean();
+                response.json({
+                    data: mug
+                });
+            };
         } else {
-            await mug.clean();
-            response.json({
-                data: mug
-            });
-        };
+            next();
+        };    
     },
-
-    todo: (_, response) => {
-        response.json({
-            status: "todo"
-        });
-    }
 
 }; 
