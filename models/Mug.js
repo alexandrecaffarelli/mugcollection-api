@@ -8,6 +8,12 @@ module.exports = class Mug {
         return result.rows;
     };
 
+    // static method to pull a single mug from database using its id
+    static async findById(id) {
+        const result = await client.query('SELECT * FROM "get_mug"($1);', [id]);
+        return result.rows;
+    };
+
     // prototype method to insert instantiated mug into database
     async save() {
         const result = await client.query('SELECT * FROM "new_mug"($1);', [this]);

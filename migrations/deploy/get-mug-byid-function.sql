@@ -2,9 +2,9 @@
 
 BEGIN;
 
-CREATE FUNCTION "get_mug"("id" INT) RETURNS "mug" AS
+CREATE FUNCTION "get_mug"("mug_id" INT) RETURNS "mug" AS
 $$
-    SELECT * FROM "mug" WHERE "id" = "id";
+    SELECT * FROM "mug" WHERE "id" = "mug_id";
 $$
 LANGUAGE SQL STABLE STRICT; 
 
