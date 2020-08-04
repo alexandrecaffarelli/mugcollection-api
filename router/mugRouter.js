@@ -5,6 +5,6 @@ const router = express.Router();
 
 router.get('/', todo);
 router.post('/', todo);
-router.put('/:id(\\d+)', todo);
+router.put('/use/:id(\\d+)', todo);
 
 module.exports = router;
