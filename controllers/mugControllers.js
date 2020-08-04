@@ -29,14 +29,21 @@ module.exports = {
     },
 
     // method to specify that a mug has been used
-    use: async (request, response) => {
+    use: async (request, response, next) => {
         const mugId = request.params.id;
         const mug = await Mug.findById(mugId);
-        await mug.use();
-
-        response.json({
-            data: mug
-        });
+        if (mug.id !== null) {
+            if (!mug.is_clean) {
+                response.json("The mug has already been used, you should clean it before using it again you disgusting pig!");
+            } else {
+                await mug.use();
+                response.json({
+                    data: mug
+                });
+            };
+        } else {
+            next();
+        };
     },
 
     // method to specify that a mug has been cleaned
