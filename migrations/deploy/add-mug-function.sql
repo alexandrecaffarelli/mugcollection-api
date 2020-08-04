@@ -2,13 +2,16 @@
 
 BEGIN;
 
-CREATE FUNCTION "collection"."new_mug"(
-    "lbl" TEXT, "cpt" INT,
-    "dscr" TEXT
-) RETURNS "collection"."mug" AS
+CREATE OR REPLACE FUNCTION "new_mug"("new_mug_data" JSON) RETURNS "mug" AS
 $$
-    INSERT INTO "collection"."mug" ("label", "capacity", "description")
-    VALUES ("lbl", "cpt", "dscr") RETURNING *;
+    INSERT INTO "mug" ("label", "capacity", "description", "state")
+    VALUES (
+        "new_mug_data"->>'label' ,
+        ("new_mug_data"->>'capacity')::INT,
+        "new_mug_data"->>'description',
+        "new_mug_data"->>'state'
+    )
+    RETURNING *;
 $$
 LANGUAGE SQL VOLATILE;
 
