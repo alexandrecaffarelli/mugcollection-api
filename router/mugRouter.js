@@ -1,10 +1,10 @@
 const express = require('express');
-const { todo } = require('../controllers/mugControllers');
+const mugControllers = require('../controllers/mugControllers');
 
 const router = express.Router();
 
-router.get('/', todo);
-router.post('/', todo);
-router.put('/use/:id(\\d+)', todo);
+router.get('/', mugControllers.getAll);
+router.post('/', mugControllers.create);
+router.put('/use/:id(\\d+)', mugControllers.use);
 
 module.exports = router;
