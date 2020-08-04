@@ -11,9 +11,17 @@ module.exports = class Mug {
     // static method to pull a single mug from database using its id
     static async findById(id) {
         const result = await client.query('SELECT * FROM "get_mug"($1);', [id]);
-        return result.rows;
+        const mug = new Mug();
+        Object.assign(mug, result.rows[0]);
+        return mug;
     };
 
+    // prototype method to modify data (is_clean, last_usage) from instantiated mug into database
+    async use() {
+        const result = await client.query('SELECT * FROM "use_mug"($1);', [this.id]);
+        Object.assign(this, result.rows[0]);
+    };
+    
     // prototype method to insert instantiated mug into database
     async save() {
         const result = await client.query('SELECT * FROM "new_mug"($1);', [this]);

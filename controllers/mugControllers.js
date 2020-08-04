@@ -28,8 +28,14 @@ module.exports = {
         });
     },
 
-    use: (request, response) => {
+    use: async (request, response) => {
+        const mugId = request.params.id;
+        const mug = await Mug.findById(mugId);
+        await mug.use();
 
+        response.json({
+            data: mug
+        });
     },
 
     todo: (_, response) => {
