@@ -22,7 +22,6 @@ module.exports = {
         const mug = new Mug();
         Object.assign(mug, request.body);
         await mug.save();
-
         response.json({
             data: mug
         });
