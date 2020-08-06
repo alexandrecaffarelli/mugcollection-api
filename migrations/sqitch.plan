@@ -10,3 +10,4 @@ get-mug-byid-function 2020-08-04T16:04:05Z Alexandre caffarelli <cafarelli.alexa
 new-role-mug-family 2020-08-04T16:46:07Z Alexandre caffarelli <cafarelli.alexandre@gmail.com> # Added specific role mug_family for security reasons
 clean-mug-function 2020-08-04T17:10:08Z Alexandre caffarelli <cafarelli.alexandre@gmail.com> # Added sql function to clean a specific mug
 remove-mug-function 2020-08-04T17:36:25Z Alexandre caffarelli <cafarelli.alexandre@gmail.com> # Added sql function to remove a specific mug from db
+update-state-function 2020-08-06T18:00:01Z Alexandre caffarelli <cafarelli.alexandre@gmail.com> # Added sql function to update state of an existing mug
