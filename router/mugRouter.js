@@ -8,6 +8,7 @@ router.get('/:id(\\d+)', mugControllers.getById);
 router.post('/', mugControllers.create);
 router.put('/use/:id(\\d+)', mugControllers.use);
 router.put('/clean/:id(\\d+)', mugControllers.clean);
+router.put('/update/:id(\\d+)', mugControllers.updateState);
 router.get('/remove/:id(\\d+)', mugControllers.remove);
 
 router.use((_, response) => {

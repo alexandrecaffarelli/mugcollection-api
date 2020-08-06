@@ -76,4 +76,19 @@ module.exports = {
         };  
     },
 
+    // method to update state of a selected mug from database   
+    updateState: async (request, response, next) => {
+        const mugId = request.params.id;
+        const mugNewState = request.body.state;
+        const mug = await Mug.findById(mugId);
+        if (mug.id !== null) {
+            mug.state = mugNewState;
+            await mug.updateState();
+            response.json({
+                data: mug
+            });
+        } else {
+            next();
+        };
+    }
 }; 
