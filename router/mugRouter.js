@@ -13,7 +13,9 @@ router.put('/update/:id(\\d+)', dataControllers.validateState, mugControllers.up
 router.get('/remove/:id(\\d+)', mugControllers.remove);
 
 router.use((_, response) => {
-    response.status(404).json("Sorry can't find that!")
+    response.status(404).json({
+        data: "Sorry can't find that!"
+    });
 });
 
 module.exports = router;

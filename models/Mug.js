@@ -36,11 +36,11 @@ module.exports = class Mug {
 
     // prototype method to remove instantiated mug from database
     async remove() {
-        const result = await client.query('SELECT * FROM "collection"."remove_mug"($1);', [this.id]);
+        await client.query('SELECT * FROM "collection"."remove_mug"($1);', [this.id]);
     };
 
     // prototype method to update state of an instantiated mug from database
     async updateState() {
-        const result = await client.query('SELECT * FROM "collection"."update_state_mug"($1, $2);', [this.id, this.state]);
+        await client.query('SELECT * FROM "collection"."update_state_mug"($1, $2);', [this.id, this.state]);
     };
 }

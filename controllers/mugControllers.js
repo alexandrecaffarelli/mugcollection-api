@@ -14,7 +14,7 @@ module.exports = {
         const mugId = request.params.id;
         response.json({
             data: await Mug.findById(mugId)
-        })
+        });
     },
 
     // method to create a new mug
@@ -33,7 +33,9 @@ module.exports = {
         const mug = await Mug.findById(mugId);
         if (mug.id !== null) {
             if (!mug.is_clean) {
-                response.json("The mug has already been used, you should clean it before using it again you disgusting pig!");
+                response.json({
+                    data: "The mug has already been used, you should clean it before using it again you disgusting pig!"
+                });
             } else {
                 await mug.use();
                 response.json({
@@ -51,7 +53,9 @@ module.exports = {
         const mug = await Mug.findById(mugId);
         if (mug.id !== null) {
             if (mug.is_clean) {
-                response.json("The mug is already clean!")
+                response.json({
+                    data: "The mug is already clean!"
+                });
             } else {
                 await mug.clean();
                 response.json({
@@ -69,7 +73,9 @@ module.exports = {
         const mug = await Mug.findById(mugId);
         if (mug.id !== null) {
             await mug.remove();
-            response.json("The mug has been removed from your collection!");
+            response.json({
+                data: "The mug has been removed from your collection!"
+            });
         } else {
             next();
         };  
