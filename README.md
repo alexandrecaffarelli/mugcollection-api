@@ -1,4 +1,4 @@
-# mugcollection-api :coffee:
+# mugcollection-api:coffee:
 
 Tool to manage your own mug collection.
 
@@ -9,6 +9,20 @@ Using:
 - [PostgreSQL](https://www.postgresql.org/),
 - [Sqitch](https://sqitch.org/),
 - [Joi](https://hapi.dev/module/joi/)
+
+## Contents
+
+- [mugcollection-api:coffee:](#mugcollection-apicoffee)
+  - [Contents](#contents)
+  - [Getting Started](#getting-started)
+  - [Routes](#routes)
+    - [Get details about all your mugs](#get-details-about-all-your-mugs)
+    - [Get details about a mug](#get-details-about-a-mug)
+    - [Add a new mug to your collection](#add-a-new-mug-to-your-collection)
+    - [Use a mug from your collection](#use-a-mug-from-your-collection)
+    - [Clean a mug from your collection](#clean-a-mug-from-your-collection)
+    - [Update state of a mug from your collection](#update-state-of-a-mug-from-your-collection)
+    - [Remove a mug from your collection](#remove-a-mug-from-your-collection)
 
 ## Getting Started
 
@@ -40,7 +54,7 @@ GET /mugs
 
 - Response *(JSON Object)*:
 
-``` JSON
+``` JS
 {
   "data": [
     {
@@ -73,7 +87,7 @@ mug_id: integer
 
 - Response *(JSON Object)*:
 
-``` JSON
+``` JS
 {
   "data": {
     "id": integer,
@@ -97,7 +111,7 @@ POST /mugs
 
 - Request *(JSON Object)*:
   
-```JSON
+```JS
 {
   "label": string, //required (unique)
   "capacity": integer, //required (in ml) - default: 250
@@ -108,7 +122,7 @@ POST /mugs
 
 - Response *(JSON Object)*:
 
-``` JSON
+``` JS
 {
   "data": {
     "label": string,
@@ -136,7 +150,7 @@ mug_id: integer
 
 - Response *(JSON Object)*:
 
-``` JSON
+``` JS
 {
   "data": {
     "id": integer,
@@ -166,7 +180,7 @@ mug_id: integer
 
 - Response *(JSON Object)*:
 
-``` JSON
+``` JS
 {
   "data": {
     "id": integer,
@@ -196,7 +210,7 @@ mug_id: integer
 
 - Request *(JSON Object)*:
   
-```JSON
+```JS
 {
   "state": string //required
 }
@@ -204,7 +218,7 @@ mug_id: integer
 
 - Response *(JSON Object)*:
 
-``` JSON
+``` JS
 {
   "data": {
     "id": integer,
@@ -234,7 +248,7 @@ mug_id: integer
 
 - Response *(JSON Object)*:
 
-``` JSON
+``` JS
 {
   "data": {
     "The mug has been removed from your collection!"
