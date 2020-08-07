@@ -85,6 +85,9 @@ module.exports = {
     updateState: async (request, response, next) => {
         const mugId = request.params.id;
         const mugNewState = request.body.state;
+        if (!mugNewState) {
+            return next();
+        }
         const mug = await Mug.findById(mugId);
         if (mug.id !== null) {
             mug.state = mugNewState;
