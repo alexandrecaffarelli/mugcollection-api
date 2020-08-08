@@ -6,4 +6,6 @@ $$
 $$
 LANGUAGE SQL VOLATILE STRICT;
 
+GRANT EXECUTE ON FUNCTION "collection"."update_state_mug"(INT, TEXT) TO "mug_family";
+
 COMMIT;

@@ -10,6 +10,6 @@ LANGUAGE SQL VOLATILE STRICT SECURITY DEFINER;
 
 CREATE ROLE "mug_family" WITH LOGIN ENCRYPTED PASSWORD 'family';
 
-GRANT EXECUTE ON FUNCTION "collection"."get_random_mug"(), "collection"."use_mug"(INT) TO "mug_family";
+GRANT EXECUTE ON FUNCTION "collection"."new_mug"(JSON), "collection"."get_mug"(INT), "collection"."get_mugs"(), "collection"."get_random_mug"(), "collection"."use_mug"(INT) TO "mug_family";
 
 COMMIT;

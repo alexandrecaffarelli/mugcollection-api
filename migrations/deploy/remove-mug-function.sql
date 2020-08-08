@@ -8,4 +8,6 @@ $$
 $$
 LANGUAGE SQL VOLATILE STRICT;
 
+GRANT EXECUTE ON FUNCTION "collection"."remove_mug"(INT) TO "mug_family";
+
 COMMIT;
