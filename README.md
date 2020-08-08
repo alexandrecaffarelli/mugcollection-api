@@ -17,6 +17,7 @@ Using:
   - [Getting Started](#getting-started)
   - [Routes](#routes)
     - [Get details about all your mugs](#get-details-about-all-your-mugs)
+    - [Get details about all your ready-to-use mugs (cleaned)](#get-details-about-all-your-ready-to-use-mugs-cleaned)
     - [Get details about a mug](#get-details-about-a-mug)
     - [Add a new mug to your collection](#add-a-new-mug-to-your-collection)
     - [Use a mug from your collection](#use-a-mug-from-your-collection)
@@ -63,6 +64,33 @@ GET /mugs
       "capacity": integer,
       "last_used": timestampz,
       "is_clean": boolean,
+      "description": string,
+      "state": string
+    },
+    ...
+  ]
+}
+```
+
+### Get details about all your ready-to-use mugs (cleaned)
+
+- Route:
+  
+```bash
+GET /mugs/cleaned
+```
+
+- Response *(JSON Object)*:
+
+``` JS
+{
+  "data": [
+    {
+      "id": integer,
+      "label": string,
+      "capacity": integer,
+      "last_used": timestampz,
+      "is_clean": boolean, //true
       "description": string,
       "state": string
     },
