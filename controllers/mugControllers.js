@@ -9,6 +9,13 @@ module.exports = {
         });
     },
 
+    // method to pull all cleaned mugs from database
+    getAllCleaned: async (_, response) => {
+        response.json({
+            data: await Mug.findAllCleaned()
+        });
+    },
+
     // method to pull a mug from database using its id
     getById: async (request, response) => {
         const mugId = request.params.id;

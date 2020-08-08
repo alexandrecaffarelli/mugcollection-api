@@ -8,6 +8,12 @@ module.exports = class Mug {
         return result.rows;
     };
 
+    // static method to pull all cleaned mugs from database
+    static async findAllCleaned() {
+        const result = await client.query('SELECT * FROM "collection"."get_cleaned_mugs";');
+        return result.rows;
+    };
+
     // static method to pull a single mug from database using its id
     static async findById(id) {
         const result = await client.query('SELECT * FROM "collection"."get_mug"($1);', [id]);

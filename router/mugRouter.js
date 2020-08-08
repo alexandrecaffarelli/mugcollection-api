@@ -5,6 +5,7 @@ const dataControllers = require('../controllers/dataControllers');
 const router = express.Router();
 
 router.get('/', mugControllers.getAll);
+router.get('/cleaned', mugControllers.getAllCleaned);
 router.get('/:id(\\d+)', mugControllers.getById);
 router.post('/', dataControllers.validateMug, mugControllers.create);
 router.put('/use/:id(\\d+)', mugControllers.use);
