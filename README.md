@@ -15,7 +15,7 @@ Using:
 - [mugcollection-api:coffee:](#mugcollection-apicoffee)
   - [Contents](#contents)
   - [Getting Started](#getting-started)
-  - [Routes](#routes)
+  - [REST API Routes](#rest-api-routes)
     - [Get details about all your mugs](#get-details-about-all-your-mugs)
     - [Get details about all your ready-to-use mugs (cleaned)](#get-details-about-all-your-ready-to-use-mugs-cleaned)
     - [Get details about a mug](#get-details-about-a-mug)
@@ -41,9 +41,9 @@ npm run start
 4. Enjoy! :rocket:
 
 To run as "dev mode": `npm run dev`. <br/>
-Please note that [nodemon](https://www.npmjs.com/package/nodemon) needs to be globally installed : `sudo npm install -g nodemon`
+Please note that [nodemon](https://www.npmjs.com/package/nodemon) needs to be globally installed : `sudo npm install -g nodemon`.
 
-## Routes
+## REST API Routes
 
 ### Get details about all your mugs
 
